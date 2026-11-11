@@ -1,0 +1,11 @@
+# Runtime for teacher eval / collect / skill_distill (CPU or CUDA torch).
+numpy>=1.23,<2
+pandas>=1.5
+PyYAML>=6
+ruamel.yaml>=0.17
+crafter==1.8.1
+stable-baselines3>=1.8,<2
+POT>=0.9
+# Install a CUDA build matching your machine, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+torch>=2.0

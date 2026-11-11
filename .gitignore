@@ -2,6 +2,7 @@ __pycache__/
 *.py[cod]
 *.egg-info/
 .venv/
+# Large local runtime copy (~7GB). Prefer scripts/setup_env.sh for GitHub clones.
 envs/
 wandb/
 logs/
@@ -9,4 +10,9 @@ logs/
 .DS_Store
 artifacts/teacher/raw/
 artifacts/teacher/seeds/
+artifacts/decision_db/
+artifacts/critical_states/
+artifacts/hypotheses/
+artifacts/skill_build/
+artifacts/skill_library/
 .pytest_cache/

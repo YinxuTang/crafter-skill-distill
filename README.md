@@ -56,18 +56,25 @@ Official Score uses achievement success rates \(s_i \in [0,100]\):
 
 ## Usage
 
-### 0) Environment notes
+### 0) Environment (in-repo only)
 
-- **No GPU needed** for reading Skills / computing Official Score from existing run dirs.
-- **GPU needed** for teacher checkpoint load, teacher eval, trajectory collection, PPO training, and Student vLLM eval.
-- Scripts prefer `~/rl2lang/envs/ad/bin/python` if present (local AD env). Otherwise set `PATH` / `PYTHON` yourself with `crafter` + the AD deps installed.
+```bash
+bash scripts/setup_env.sh
+# CUDA example:
+# TORCH_INDEX_URL=https://download.pytorch.org/whl/cu121 bash scripts/setup_env.sh
+```
+
+All scripts use `./.venv` inside this folder. No `rl2lang` paths required.
+
+- **No GPU**: Official Score / reading Skills  
+- **GPU**: teacher load, teacher eval, collect, train, Student vLLM  
 
 ### 1) Compute Official Score (CPU)
 
 ```bash
 cd /path/to/crafter-skill-distill
 python scripts/compute_official_score.py \
-  --run /path/to/balrog_run_dir_with_default_run_json
+  --run artifacts/results/sample_8b_full72_run1
 ```
 
 ### 2) Smoke-load teacher checkpoint (GPU recommended)

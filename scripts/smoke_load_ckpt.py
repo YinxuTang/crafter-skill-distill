@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Load teacher checkpoint onto GPU/CPU and print a short OK line."""
+"""Load teacher checkpoint onto GPU/CPU (in-repo only)."""
 from __future__ import annotations
+
 import sys
 from pathlib import Path
+
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "third_party" / "Achievement-Distillation"))
+
 import torch
 
 ckpt = Path(sys.argv[1] if len(sys.argv) > 1 else ROOT / "artifacts/teacher/agent-e250.pt")

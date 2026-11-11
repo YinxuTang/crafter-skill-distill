@@ -1,0 +1,78 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move West": 50,
+        "Do": 87,
+        "Move South": 6,
+        "Move East": 2,
+        "Place Plant": 3,
+        "Place Table": 6,
+        "Make Wood Sword": 1,
+        "Make Stone Sword": 3,
+        "Make Stone Pickaxe": 8,
+        "Move North": 4,
+        "Place Furnace": 5
+    },
+    "input_tokens": 4475691,
+    "output_tokens": 121609,
+    "done": true,
+    "episode_return": 5.099999999999999,
+    "num_steps": 175,
+    "failed_candidates": [],
+    "score": 6.0,
+    "progression": 0.2727272727272727,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 0,
+        "collect_iron": 0,
+        "collect_sapling": 2,
+        "collect_stone": 0,
+        "collect_wood": 7,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 1,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 1,
+        "place_furnace": 0,
+        "place_plant": 2,
+        "place_stone": 0,
+        "place_table": 1,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-2",
+    "seed": 687194767,
+    "agent": {
+        "type": "skill_spring",
+        "remember_cot": true,
+        "max_text_history": 2,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen3-8B",
+        "base_url": "http://127.0.0.1:8000/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 256,
+            "thinking_budget": null,
+            "extra_body": {
+                "chat_template_kwargs": {
+                    "enable_thinking": false
+                }
+            }
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

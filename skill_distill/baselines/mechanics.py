@@ -38,14 +38,7 @@ def load_data_yaml(path: str) -> Dict[str, Any]:
 
 
 def default_data_yaml() -> Path:
-    # Prefer the project env copy; fall back to installed package.
-    candidates = [
-        Path("/home/tiger/rl2lang/envs/ad/lib/python3.11/site-packages/crafter/data.yaml"),
-        Path.home() / ".local/lib/python3.11/site-packages/crafter/data.yaml",
-    ]
-    for path in candidates:
-        if path.exists():
-            return path
+    # Resolve from the installed crafter package (in-repo .venv).
     import crafter
 
     return Path(crafter.__file__).resolve().parent / "data.yaml"

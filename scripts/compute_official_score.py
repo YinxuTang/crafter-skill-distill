@@ -17,7 +17,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run", required=True, help="Directory containing default_run_*.json")
     parser.add_argument("--name", default="run")
-    parser.add_argument("--json", action="store_true", help="Print JSON only")
+    parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
     episodes = load_run(args.run)
     summary = summarize(args.name, episodes)

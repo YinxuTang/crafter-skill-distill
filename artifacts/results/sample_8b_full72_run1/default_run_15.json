@@ -1,0 +1,72 @@
+{
+    "task": "default",
+    "action_frequency": {
+        "Move West": 39,
+        "Do": 143,
+        "Place Plant": 2,
+        "Move North": 4,
+        "Move South": 3
+    },
+    "input_tokens": 4763322,
+    "output_tokens": 113345,
+    "done": true,
+    "episode_return": 3.099999999999999,
+    "num_steps": 191,
+    "failed_candidates": [],
+    "score": 4.0,
+    "progression": 0.18181818181818182,
+    "achievements": {
+        "collect_coal": 0,
+        "collect_diamond": 0,
+        "collect_drink": 126,
+        "collect_iron": 0,
+        "collect_sapling": 2,
+        "collect_stone": 0,
+        "collect_wood": 1,
+        "defeat_skeleton": 0,
+        "defeat_zombie": 0,
+        "eat_cow": 0,
+        "eat_plant": 0,
+        "make_iron_pickaxe": 0,
+        "make_iron_sword": 0,
+        "make_stone_pickaxe": 0,
+        "make_stone_sword": 0,
+        "make_wood_pickaxe": 0,
+        "make_wood_sword": 0,
+        "place_furnace": 0,
+        "place_plant": 1,
+        "place_stone": 0,
+        "place_table": 0,
+        "wake_up": 0
+    },
+    "process_num": "ForkProcess-3",
+    "seed": 1657382940,
+    "agent": {
+        "type": "skill_spring",
+        "remember_cot": true,
+        "max_text_history": 2,
+        "max_image_history": 0,
+        "max_cot_history": 1,
+        "max_icl_history": 1000,
+        "cache_icl": false
+    },
+    "client": {
+        "client_name": "vllm",
+        "model_id": "Qwen/Qwen3-8B",
+        "base_url": "http://127.0.0.1:8000/v1",
+        "generate_kwargs": {
+            "temperature": 1.0,
+            "max_tokens": 256,
+            "thinking_budget": null,
+            "extra_body": {
+                "chat_template_kwargs": {
+                    "enable_thinking": false
+                }
+            }
+        },
+        "timeout": 60,
+        "max_retries": 5,
+        "delay": 2,
+        "alternate_roles": false
+    }
+}

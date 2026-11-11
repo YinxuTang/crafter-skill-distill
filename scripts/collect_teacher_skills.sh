@@ -1,12 +1,9 @@
 #!/bin/bash
-# Collect teacher trajectories for distillation (GPU).
+# Collect teacher trajectories into this package (GPU).
 set -euo pipefail
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-export PYTHONPATH="$ROOT:$ROOT/third_party/Achievement-Distillation:${PYTHONPATH:-}"
-if [[ -x "$HOME/rl2lang/envs/ad/bin/python" ]]; then
-  export PATH="$HOME/rl2lang/envs/ad/bin:$PATH"
-fi
-export LD_LIBRARY_PATH="${HOME}/.local/nvidia-lib-fix:/usr/local/cuda-12.6/compat:${LD_LIBRARY_PATH:-}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+# shellcheck disable=SC1091
+source "$SCRIPT_DIR/_env.sh"
 
 CKPT="${CKPT:-$ROOT/artifacts/teacher/agent-e250.pt}"
 SPLIT="${SPLIT:-exploration}"
@@ -18,12 +15,12 @@ FORK_HORIZON="${FORK_HORIZON:-9}"
 
 mkdir -p "$(dirname "$SEEDS_FILE")" "$(dirname "$OUT")"
 if [[ ! -f "$SEEDS_FILE" ]]; then
-  python -m skill_distill.make_seed_splits \
+  "$PYTHON" -m skill_distill.make_seed_splits \
     --out-dir "$SEEDS_DIR" \
     --exclude "$ROOT/artifacts/teacher/matched_seeds_20.txt"
 fi
 
-python -m skill_distill.collect_teacher \
+"$PYTHON" -m skill_distill.collect_teacher \
   --ckpt "$CKPT" \
   --config "$ROOT/third_party/Achievement-Distillation/configs/ppo_ad.yaml" \
   --seeds-file "$SEEDS_FILE" \
