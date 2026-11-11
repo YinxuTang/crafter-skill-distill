@@ -1,5 +1,9 @@
 # Crafter Teacher Skill Distillation
 
+> **中文版请看 [README_zh.md](README_zh.md)**（含完整蒸馏步骤）。
+> Distillation step-by-step (v4 Hypothesis DSL + earlier skill-library path) is documented in the Chinese README.
+
+
 Package a **PPO-AD RL teacher**, a **grounded skill-distillation pipeline**, and **Student evaluation artifacts** for Crafter.
 
 This repo is a **standalone copy** of useful outputs from an internal workspace. It does **not** modify the original project tree.
