@@ -1,0 +1,665 @@
+{
+  "n_rules": 72,
+  "status_counts": {
+    "keep": 54,
+    "undercovered": 18
+  },
+  "kind_counts": {
+    "policy_skill": 29,
+    "basic_mechanics": 7,
+    "basic_navigation": 15,
+    "basic_affordance": 8,
+    "progression_pattern": 11,
+    "uncertain": 2
+  },
+  "rules": [
+    {
+      "n": 1,
+      "hypothesis_id": "hyp_place_early_plant_before_collecting_wood",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 1.0,
+      "support": 95,
+      "text": "1. When holding a sapling, before placing plant, before collecting wood, use `Place Plant`."
+    },
+    {
+      "n": 2,
+      "hypothesis_id": "hyp_place_early_sapling_with_distant_southwestern_tree",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 1.0,
+      "support": 95,
+      "text": "2. When holding exactly one sapling, before collecting wood, before placing plant, use `Place Plant`."
+    },
+    {
+      "n": 3,
+      "hypothesis_id": "hyp_attack_southern_skeleton_with_wood_sword_despite_western_grass",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.9801762114537445,
+      "support": 454,
+      "text": "3. When facing skeleton, with no stone sword, use `Do`."
+    },
+    {
+      "n": 4,
+      "hypothesis_id": "hyp_attack_zombie_with_wood_sword_without_stone",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.9666566536497446,
+      "support": 3329,
+      "text": "4. When facing zombie, use `Do`."
+    },
+    {
+      "n": 5,
+      "hypothesis_id": "hyp_attack_cow_before_first_meal_with_existing_wood_sword_while_awake",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.9257759784075573,
+      "support": 741,
+      "text": "5. When facing cow, holding wood sword, holding exactly one wood, during the day, while awake, use `Do`."
+    },
+    {
+      "n": 6,
+      "hypothesis_id": "hyp_move_south_to_close_cow_without_visible_resources",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.9210526315789473,
+      "support": 38,
+      "text": "6. When facing grass, holding wood sword, while awake, with cow to the South, with a cow exactly 2 steps away, with no tree visible, use `Move South`."
+    },
+    {
+      "n": 7,
+      "hypothesis_id": "hyp_interact_with_first_cow_without_sword_despite_high_food",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.906345957011259,
+      "support": 1954,
+      "text": "7. When facing cow, use `Do`."
+    },
+    {
+      "n": 8,
+      "hypothesis_id": "hyp_feed_from_facing_cow_despite_thirst_with_stone_sword",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.8883248730964467,
+      "support": 394,
+      "text": "8. When facing cow, holding stone sword, use `Do`."
+    },
+    {
+      "n": 9,
+      "hypothesis_id": "hyp_western_first_drink_approach_without_cow_or_stone_competition",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.8421052631578947,
+      "support": 38,
+      "text": "9. When facing grass, holding wood sword, before collecting drink, while awake, with water to the West, with a water exactly 2 steps away, with no cow visible, with no stone visible, use `Move West`."
+    },
+    {
+      "n": 10,
+      "hypothesis_id": "hyp_initial_southwestern_cow_approach_without_competing_terrain",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.7972972972972973,
+      "support": 74,
+      "text": "10. When before collecting wood, with no tree visible, with cow to the South-West, with no stone visible, with no sand visible, use `Move South`."
+    },
+    {
+      "n": 11,
+      "hypothesis_id": "hyp_northern_coal_approach_after_stone_placement_with_moderate_stone",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.78125,
+      "support": 64,
+      "text": "11. When facing path, holding at least 2 stone, holding at most 3 stone, with coal to the North, with a coal exactly 2 steps away, with no skeleton visible, use `Move North`."
+    },
+    {
+      "n": 12,
+      "hypothesis_id": "hyp_seek_northwestern_cow_when_distant_table_has_no_tree_competition",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.7767857142857143,
+      "support": 112,
+      "text": "12. When facing grass, holding wood sword, before eating cow, during the day, with no tree visible, with cow to the North-West, use one of `Move North`, `Move West`."
+    },
+    {
+      "n": 13,
+      "hypothesis_id": "hyp_place_first_furnace_on_path_at_four_stone_away_from_table",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.6951219512195121,
+      "support": 82,
+      "text": "13. When facing path, holding exactly 4 stone, with no stone pickaxe, before placing furnace, with a table more than 1 step away, use `Place Furnace`."
+    },
+    {
+      "n": 14,
+      "hypothesis_id": "hyp_target_first_furnace_from_path_without_adjacent_stone_or_enemies",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.6846153846153846,
+      "support": 130,
+      "text": "14. When facing path, holding exactly 4 stone, holding coal, before placing furnace, with no zombie visible, with no skeleton visible, prioritize interacting with `furnace`."
+    },
+    {
+      "n": 15,
+      "hypothesis_id": "hyp_place_first_plant_at_night_without_enemies_when_food_not_critical",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.6486486486486487,
+      "support": 185,
+      "text": "15. When facing grass, holding a sapling, before placing plant, at night, with food ≥ 2, use `Place Plant`."
+    },
+    {
+      "n": 16,
+      "hypothesis_id": "hyp_first_furnace_on_path_before_stone_pickaxe_without_visible_enemies",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.6440677966101694,
+      "support": 177,
+      "text": "16. When facing path, holding exactly 4 stone, with no stone pickaxe, before placing furnace, with no zombie visible, with no skeleton visible, use `Place Furnace`."
+    },
+    {
+      "n": 17,
+      "hypothesis_id": "hyp_first_path_stone_placement_without_coal_with_small_wood_reserve",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.632996632996633,
+      "support": 297,
+      "text": "17. When facing path, holding exactly one stone, with no coal, holding at least 1 wood, before placing stone, use `Place Stone`."
+    },
+    {
+      "n": 18,
+      "hypothesis_id": "hyp_follow_southeastern_tree_at_two_wood_despite_eastern_cow",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.6,
+      "support": 45,
+      "text": "18. When no wood pickaxe, with tree to the South-East, with cow to the East, use one of `Move East`, `Move South`."
+    },
+    {
+      "n": 19,
+      "hypothesis_id": "hyp_empty_wood_daytime_tree_target_before_first_wake",
+      "status": "keep",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.5669551934826884,
+      "support": 3928,
+      "text": "19. When facing grass, with a tree within 2 steps, prioritize interacting with `tree`."
+    },
+    {
+      "n": 20,
+      "hypothesis_id": "hyp_place_first_table_on_grass_at_three_wood_before_tools",
+      "status": "keep",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.9766233766233766,
+      "support": 385,
+      "text": "20. When holding exactly 3 wood, with no wood pickaxe, use `Place Table`."
+    },
+    {
+      "n": 21,
+      "hypothesis_id": "hyp_first_wood_sword_preempts_adjacent_western_water",
+      "status": "keep",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.9741379310344828,
+      "support": 116,
+      "text": "21. When facing grass, holding wood pickaxe, with no wood sword, holding wood, with a table within 1 step, use `Make Wood Sword`."
+    },
+    {
+      "n": 22,
+      "hypothesis_id": "hyp_continue_tree_interaction_beside_zombie_without_stone_diversion",
+      "status": "keep",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.9496686651940676,
+      "support": 6338,
+      "text": "22. When facing tree, use `Do`."
+    },
+    {
+      "n": 23,
+      "hypothesis_id": "hyp_first_stone_sword_at_table_after_pickaxe_with_available_wood",
+      "status": "keep",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.7528089887640449,
+      "support": 89,
+      "text": "23. When facing table, holding exactly one stone, holding wood, holding stone pickaxe, before crafting a stone sword, use `Make Stone Sword`."
+    },
+    {
+      "n": 24,
+      "hypothesis_id": "hyp_make_first_stone_pickaxe_at_table_with_single_stone_and_coal",
+      "status": "keep",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.7205882352941176,
+      "support": 136,
+      "text": "24. When facing table, holding exactly one stone, holding exactly one wood, holding coal, before crafting a stone pickaxe, during the day, use `Make Stone Pickaxe`."
+    },
+    {
+      "n": 25,
+      "hypothesis_id": "hyp_make_first_stone_pickaxe_at_table_with_coal_before_drink",
+      "status": "keep",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.7162162162162162,
+      "support": 74,
+      "text": "25. When facing table, holding coal, holding stone, holding wood, before collecting drink, before crafting a stone pickaxe, use `Make Stone Pickaxe`."
+    },
+    {
+      "n": 26,
+      "hypothesis_id": "hyp_approach_close_western_skeleton_from_path",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.9318181818181818,
+      "support": 88,
+      "text": "26. When facing path, before defeating skeleton, with skeleton to the West, with a skeleton within 2 steps, use `Move West`."
+    },
+    {
+      "n": 27,
+      "hypothesis_id": "hyp_western_skeleton_engagement_over_first_furnace_with_four_stone",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.9206349206349206,
+      "support": 63,
+      "text": "27. When facing path, before placing furnace, with skeleton to the West, with a skeleton exactly 2 steps away, use `Move West`."
+    },
+    {
+      "n": 28,
+      "hypothesis_id": "hyp_initial_southwestern_tree_interaction_or_southern_move",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.8978328173374613,
+      "support": 646,
+      "text": "28. When before collecting wood, before collecting a sapling, with tree to the South-West, use one of `Do`, `Move South`."
+    },
+    {
+      "n": 29,
+      "hypothesis_id": "hyp_eastern_stone_low_inventory_action_set",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.8651685393258427,
+      "support": 89,
+      "text": "29. When facing stone, holding at least 2 wood, holding exactly one stone, with stone to the East, with health ≥ 8, use one of `Do`, `Move East`, `Make Stone Pickaxe`."
+    },
+    {
+      "n": 30,
+      "hypothesis_id": "hyp_continue_northern_stone_engagement_at_full_energy_after_waking",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.8580246913580247,
+      "support": 162,
+      "text": "30. When facing stone, with stone to the North, with energy=9, use one of `Do`, `Move North`."
+    },
+    {
+      "n": 31,
+      "hypothesis_id": "hyp_initial_southern_tree_approach_before_cow_achievement",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.8055555555555556,
+      "support": 72,
+      "text": "31. When facing grass, before collecting wood, before collecting a sapling, before eating cow, with tree to the South, with a tree exactly 2 steps away, use `Move South`."
+    },
+    {
+      "n": 32,
+      "hypothesis_id": "hyp_follow_northern_tree_before_first_table_with_two_wood",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.7859649122807018,
+      "support": 570,
+      "text": "32. When facing grass, with no wood pickaxe, with tree to the North, use `Move North`."
+    },
+    {
+      "n": 33,
+      "hypothesis_id": "hyp_approach_close_southern_skeleton_from_path_with_wood_sword",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.768595041322314,
+      "support": 242,
+      "text": "33. When facing path, with skeleton to the South, use `Move South`."
+    },
+    {
+      "n": 34,
+      "hypothesis_id": "hyp_replenish_southern_wood_after_table_before_pickaxe",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.7333333333333333,
+      "support": 30,
+      "text": "34. When facing grass, with no wood, with no wood pickaxe, after placing table, with tree to the South, use `Move South`."
+    },
+    {
+      "n": 35,
+      "hypothesis_id": "hyp_replenish_wood_north_before_attempting_first_sword",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.7255400254129606,
+      "support": 787,
+      "text": "35. When facing grass, with no wood sword, with tree to the North, use `Move North`."
+    },
+    {
+      "n": 36,
+      "hypothesis_id": "hyp_prioritize_southern_coal_over_northeastern_table_before_first_sword",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.6842105263157895,
+      "support": 38,
+      "text": "36. When facing grass, holding wood pickaxe, before crafting a wood sword, with coal to the South, use `Move South`."
+    },
+    {
+      "n": 37,
+      "hypothesis_id": "hyp_seek_northeastern_stone_after_cow_with_wood_reserve",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.6417910447761194,
+      "support": 67,
+      "text": "37. When facing grass, holding exactly 4 wood, with no stone, during the day, with stone to the North-East, use one of `Move North`, `Move East`."
+    },
+    {
+      "n": 38,
+      "hypothesis_id": "hyp_approach_northern_adjacent_zombie_before_first_defeat",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.625,
+      "support": 40,
+      "text": "38. When facing grass, holding wood sword, with no stone sword, before defeating zombie, while awake, with zombie to the North, use `Move North`."
+    },
+    {
+      "n": 39,
+      "hypothesis_id": "hyp_seek_northeastern_stone_with_four_wood_away_from_tree_and_cow",
+      "status": "keep",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.6,
+      "support": 75,
+      "text": "39. When facing grass, holding exactly 4 wood, with no stone, with stone to the North-East, use one of `Move North`, `Move East`."
+    },
+    {
+      "n": 40,
+      "hypothesis_id": "hyp_continue_stone_target_despite_visible_diamond_before_furnace",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 1.0,
+      "support": 39,
+      "text": "40. When facing stone, holding stone pickaxe, before placing furnace, with diamond visible, prioritize interacting with `stone`."
+    },
+    {
+      "n": 41,
+      "hypothesis_id": "hyp_low_health_night_zombie_engagement_target",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.9750859106529209,
+      "support": 1164,
+      "text": "41. When facing zombie, prioritize interacting with `zombie`."
+    },
+    {
+      "n": 42,
+      "hypothesis_id": "hyp_replenish_empty_wood_from_tree_before_first_sword",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.9708705726580602,
+      "support": 3021,
+      "text": "42. When facing tree, prioritize interacting with `tree`."
+    },
+    {
+      "n": 43,
+      "hypothesis_id": "hyp_stone_target_before_first_collection_instead_of_sleep",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.9216152019002375,
+      "support": 842,
+      "text": "43. When facing stone, with energy=8, prioritize interacting with `stone`."
+    },
+    {
+      "n": 44,
+      "hypothesis_id": "hyp_stone_target_beside_uncollected_iron_with_adequate_energy",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.8949059201468563,
+      "support": 2179,
+      "text": "44. When facing stone, with energy ≥ 6, prioritize interacting with `stone`."
+    },
+    {
+      "n": 45,
+      "hypothesis_id": "hyp_target_facing_water_before_first_drink_without_visible_enemies",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.8940568475452196,
+      "support": 387,
+      "text": "45. When facing water, before collecting drink, with no skeleton visible, prioritize interacting with `water`."
+    },
+    {
+      "n": 46,
+      "hypothesis_id": "hyp_facing_western_stone_target_with_visible_diamond_before_upgrade",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.8172043010752689,
+      "support": 93,
+      "text": "46. When facing stone, with no stone pickaxe, with stone to the West, with diamond visible, prioritize interacting with `stone`."
+    },
+    {
+      "n": 47,
+      "hypothesis_id": "hyp_night_facing_iron_target_after_stone_pickaxe_and_coal",
+      "status": "keep",
+      "knowledge_kind": "basic_affordance",
+      "fidelity": 0.757700205338809,
+      "support": 487,
+      "text": "47. When facing iron, prioritize interacting with `iron`."
+    },
+    {
+      "n": 48,
+      "hypothesis_id": "hyp_collect_wood_after_plant_with_westward_tree_within_five",
+      "status": "keep",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.9803921568627451,
+      "support": 51,
+      "text": "48. When facing plant, before collecting wood, with tree toward West, with a tree within 5 steps, pursue `collect_wood` as the next achievement."
+    },
+    {
+      "n": 49,
+      "hypothesis_id": "hyp_first_plant_progress_despite_zombie_without_close_tree",
+      "status": "keep",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.9176470588235294,
+      "support": 85,
+      "text": "49. When facing grass, holding a sapling, before placing plant, after defeating zombie, with a tree more than 2 steps away, pursue `place_plant` as the next achievement."
+    },
+    {
+      "n": 50,
+      "hypothesis_id": "hyp_first_skeleton_progress_from_grass_without_close_stone",
+      "status": "keep",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.7948717948717948,
+      "support": 78,
+      "text": "50. When facing grass, during the day, with a skeleton exactly 2 steps away, with a stone more than 2 steps away, pursue `defeat_skeleton` as the next achievement."
+    },
+    {
+      "n": 51,
+      "hypothesis_id": "hyp_first_furnace_progress_from_path_with_coal_before_swords",
+      "status": "keep",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.7185792349726776,
+      "support": 366,
+      "text": "51. When facing path, holding exactly 4 stone, before placing furnace, pursue `place_furnace` as the next achievement."
+    },
+    {
+      "n": 52,
+      "hypothesis_id": "hyp_first_stone_placement_progress_before_nearby_coal",
+      "status": "keep",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.6551724137931034,
+      "support": 87,
+      "text": "52. When facing path, holding exactly one stone, with no stone pickaxe, before placing stone, before collecting coal, with a coal exactly 2 steps away, pursue `place_stone` as the next achievement."
+    },
+    {
+      "n": 53,
+      "hypothesis_id": "hyp_first_drink_progress_from_sand_with_uncontested_northern_water",
+      "status": "keep",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.6046511627906976,
+      "support": 43,
+      "text": "53. When facing sand, holding wood pickaxe, before collecting drink, with water to the North, with a water exactly 2 steps away, with no skeleton visible, pursue `collect_drink` as the next achievement."
+    },
+    {
+      "n": 54,
+      "hypothesis_id": "hyp_mine_facing_stone_with_empty_stone_inventory_despite_distant_coal",
+      "status": "keep",
+      "knowledge_kind": "uncertain",
+      "fidelity": 0.603671706263499,
+      "support": 12964,
+      "text": "54. When facing stone, use `Do`."
+    },
+    {
+      "n": 55,
+      "hypothesis_id": "hyp_leave_southern_table_for_western_tree_when_wood_empty",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 1.0,
+      "support": 9,
+      "text": "55. When facing table, with no wood, with no wood pickaxe, with tree to the West, with table to the South, use `Move West`."
+    },
+    {
+      "n": 56,
+      "hypothesis_id": "hyp_leave_furnace_for_adjacent_water_when_drink_depleted",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 1.0,
+      "support": 1,
+      "text": "56. When facing furnace, holding stone pickaxe, before collecting drink, while awake, with water visible, with a water within 1 step, with drink ≤ 2, prioritize interacting with `water`."
+    },
+    {
+      "n": 57,
+      "hypothesis_id": "hyp_prioritize_western_coal_over_northeastern_table_with_empty_wood",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 1.0,
+      "support": 1,
+      "text": "57. When facing grass, holding wood pickaxe, with no wood, before collecting coal, while awake, with table to the North-East, with coal to the West, with a coal within 3 steps, use `Move West`."
+    },
+    {
+      "n": 58,
+      "hypothesis_id": "hyp_approach_eastern_skeleton_from_path_with_stone_sword",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.9375,
+      "support": 16,
+      "text": "58. When facing path, holding stone sword, with skeleton to the East, with a skeleton within 2 steps, with health ≥ 5, with no zombie visible, use `Move East`."
+    },
+    {
+      "n": 59,
+      "hypothesis_id": "hyp_approach_southern_cow_with_sword_without_resource_competition",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.9130434782608695,
+      "support": 23,
+      "text": "59. When facing grass, holding wood sword, before eating cow, while awake, with cow to the South, with no tree visible, with no stone visible, use `Move South`."
+    },
+    {
+      "n": 60,
+      "hypothesis_id": "hyp_close_western_cow_preempts_southeastern_tree_with_wood_sword",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.8636363636363636,
+      "support": 22,
+      "text": "60. When facing grass, holding wood sword, while awake, with tree to the South-East, with cow to the West, with a cow within 2 steps, with a table more than 1 step away, use `Move West`."
+    },
+    {
+      "n": 61,
+      "hypothesis_id": "hyp_southern_cow_approach_at_full_energy_without_resource_competition",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.8620689655172413,
+      "support": 29,
+      "text": "61. When facing grass, before eating cow, with cow to the South, with no tree visible, with no stone visible, with energy=9, use `Move South`."
+    },
+    {
+      "n": 62,
+      "hypothesis_id": "hyp_target_western_water_from_grass_before_first_drink",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.75,
+      "support": 8,
+      "text": "62. When facing grass, holding wood sword, before collecting drink, with water to the West, with a water within 2 steps, with no tree visible, with no stone visible, prioritize interacting with `water`."
+    },
+    {
+      "n": 63,
+      "hypothesis_id": "hyp_target_close_stone_after_wood_tools_without_nearby_competitors",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.6666666666666666,
+      "support": 3,
+      "text": "63. When facing grass, holding wood pickaxe, before collecting stone, with a stone within 2 steps, with a tree more than 2 steps away, with a coal more than 2 steps away, with a cow more than 2 steps away, with a skeleton more than 2 steps away, prioritize interacting with `stone`."
+    },
+    {
+      "n": 64,
+      "hypothesis_id": "hyp_target_eastern_tree_with_two_wood_after_drink_and_cow",
+      "status": "undercovered",
+      "knowledge_kind": "policy_skill",
+      "fidelity": 0.631578947368421,
+      "support": 19,
+      "text": "64. When facing grass, holding exactly 2 wood, after collecting drink, after eating cow, with tree to the East, with a tree exactly 2 steps away, with no stone visible, prioritize interacting with `tree`."
+    },
+    {
+      "n": 65,
+      "hypothesis_id": "hyp_continue_stone_interaction_despite_northern_coal",
+      "status": "undercovered",
+      "knowledge_kind": "basic_mechanics",
+      "fidelity": 0.8695652173913043,
+      "support": 23,
+      "text": "65. When facing stone, holding exactly 2 stone, with no stone pickaxe, with coal to the North, use `Do`."
+    },
+    {
+      "n": 66,
+      "hypothesis_id": "hyp_move_north_toward_tree_after_early_plant",
+      "status": "undercovered",
+      "knowledge_kind": "basic_navigation",
+      "fidelity": 0.9655172413793104,
+      "support": 29,
+      "text": "66. When facing grass, before collecting wood, after placing plant, with tree to the North, use `Move North`."
+    },
+    {
+      "n": 67,
+      "hypothesis_id": "hyp_first_furnace_progress_with_four_stone_without_nearby_competitors",
+      "status": "undercovered",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 1.0,
+      "support": 5,
+      "text": "67. When holding exactly 4 stone, before placing furnace, with a tree more than 2 steps away, with a iron more than 2 steps away, with no skeleton visible, with a table more than 1 step away, pursue `place_furnace` as the next achievement."
+    },
+    {
+      "n": 68,
+      "hypothesis_id": "hyp_first_coal_progress_after_stone_placement_without_close_stone",
+      "status": "undercovered",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 1.0,
+      "support": 4,
+      "text": "68. When facing path, holding wood pickaxe, holding exactly 2 stone, before collecting coal, after placing stone, with a coal within 2 steps, with a stone more than 2 steps away, with no skeleton visible, pursue `collect_coal` as the next achievement."
+    },
+    {
+      "n": 69,
+      "hypothesis_id": "hyp_first_coal_progress_with_adjacent_coal_and_two_stone",
+      "status": "undercovered",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 1.0,
+      "support": 2,
+      "text": "69. When facing path, holding wood pickaxe, holding exactly 2 stone, before collecting coal, with a coal within 1 step, with a stone more than 1 step away, with a table more than 2 steps away, with no skeleton visible, pursue `collect_coal` as the next achievement."
+    },
+    {
+      "n": 70,
+      "hypothesis_id": "hyp_first_drink_progress_at_western_water_after_sword_without_competitors",
+      "status": "undercovered",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 1.0,
+      "support": 2,
+      "text": "70. When facing grass, holding wood sword, before collecting drink, with water to the West, with a water exactly 2 steps away, with no tree visible, with no stone visible, with no table visible, pursue `collect_drink` as the next achievement."
+    },
+    {
+      "n": 71,
+      "hypothesis_id": "hyp_first_stone_progress_with_large_wood_reserve_and_close_western_stone",
+      "status": "undercovered",
+      "knowledge_kind": "progression_pattern",
+      "fidelity": 0.7272727272727273,
+      "support": 11,
+      "text": "71. When facing grass, holding at least 6 wood, before collecting stone, with stone to the West, pursue `collect_stone` as the next achievement."
+    },
+    {
+      "n": 72,
+      "hypothesis_id": "hyp_first_table_with_southeastern_tree_and_northeastern_cow",
+      "status": "undercovered",
+      "knowledge_kind": "uncertain",
+      "fidelity": 0.5714285714285714,
+      "support": 7,
+      "text": "72. When facing grass, holding exactly 2 wood, with no wood pickaxe, before placing table, during the day, with tree to the South-East, with a tree at least 2 steps away, with cow to the North-East, use `Place Table`."
+    }
+  ]
+}

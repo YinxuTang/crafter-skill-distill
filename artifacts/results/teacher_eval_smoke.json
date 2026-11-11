@@ -1,0 +1,39 @@
+{
+  "ckpt": "/home/tiger/crafter-skill-distill/artifacts/teacher/agent-e250.pt",
+  "num_episodes": 1,
+  "seeds": [
+    1
+  ],
+  "seeds_file": null,
+  "score": 27.687207307368546,
+  "balrog_progression_pct": 72.72727272727273,
+  "balrog_progression_se": 0.0,
+  "per_episode_progression": [
+    72.72727272727273
+  ],
+  "success_rate": {
+    "collect_coal": 100.0,
+    "collect_diamond": 0.0,
+    "collect_drink": 100.0,
+    "collect_iron": 0.0,
+    "collect_sapling": 100.0,
+    "collect_stone": 100.0,
+    "collect_wood": 100.0,
+    "defeat_skeleton": 100.0,
+    "defeat_zombie": 100.0,
+    "eat_cow": 100.0,
+    "eat_plant": 0.0,
+    "make_iron_pickaxe": 0.0,
+    "make_iron_sword": 0.0,
+    "make_stone_pickaxe": 100.0,
+    "make_stone_sword": 100.0,
+    "make_wood_pickaxe": 100.0,
+    "make_wood_sword": 100.0,
+    "place_furnace": 100.0,
+    "place_plant": 100.0,
+    "place_stone": 100.0,
+    "place_table": 100.0,
+    "wake_up": 0.0
+  },
+  "mean_unlocked": 16.0
+}

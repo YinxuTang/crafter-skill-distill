@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verdict", "claim_reviews", "issues", "revision_instructions"],
+  "properties": {
+    "verdict": {"type": "string", "enum": ["accept", "revise", "reject"]},
+    "claim_reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_text", "verdict", "reason", "checked_evidence_ids"],
+        "properties": {
+          "claim_text": {"type": "string"},
+          "verdict": {
+            "type": "string",
+            "enum": ["entailed", "partially_supported", "contradicted", "uncited"]
+          },
+          "reason": {"type": "string"},
+          "checked_evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["severity", "description", "evidence_ids"],
+        "properties": {
+          "severity": {"type": "string", "enum": ["low", "medium", "high"]},
+          "description": {"type": "string"},
+          "evidence_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "revision_instructions": {"type": "array", "items": {"type": "string"}}
+  }
+}

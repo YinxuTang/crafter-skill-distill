@@ -1,0 +1,39 @@
+{
+  "source": "ppo_ad-step1-s00/stats.jsonl",
+  "n_lines": 4660,
+  "checkpoint": "artifacts/teacher/agent-e250.pt",
+  "train_steps": 1024000,
+  "nepoch": 250,
+  "note_train_geometric_score_approx": 21.32,
+  "eval_20ep_matchedseeds": {
+    "progression_pct": 62.05,
+    "progression_se_pct": 3.49,
+    "official_score": 32.12
+  },
+  "sample_last_line_keys": [
+    "length",
+    "reward",
+    "achievement_collect_coal",
+    "achievement_collect_diamond",
+    "achievement_collect_drink",
+    "achievement_collect_iron",
+    "achievement_collect_sapling",
+    "achievement_collect_stone",
+    "achievement_collect_wood",
+    "achievement_defeat_skeleton",
+    "achievement_defeat_zombie",
+    "achievement_eat_cow",
+    "achievement_eat_plant",
+    "achievement_make_iron_pickaxe",
+    "achievement_make_iron_sword",
+    "achievement_make_stone_pickaxe",
+    "achievement_make_stone_sword",
+    "achievement_make_wood_pickaxe",
+    "achievement_make_wood_sword",
+    "achievement_place_furnace",
+    "achievement_place_plant",
+    "achievement_place_stone",
+    "achievement_place_table",
+    "achievement_wake_up"
+  ]
+}

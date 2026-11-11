@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+envs/
+wandb/
+logs/
+*.log
+.DS_Store
+artifacts/teacher/raw/
+artifacts/teacher/seeds/
+.pytest_cache/
